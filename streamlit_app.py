@@ -22,7 +22,7 @@ if st.button("Click to Proceed with Test"):
 # ---- MOCK DATA TABLE ----
 st.subheader("📝 Test Case Table")
 data = {
-    "Test ID": ["IFSTA" 1,"IFSTA" 2,"IFSTA" 3],
+    "Test ID": ["IFS.T.A. 1","IFS.T.A. 2","IFS.T.A. 3"],
     "Description": ["Login test", "Checkout flow", "Search function"],
     "Status": ["✅ Passed", "✅ Passed", "❌ Failed"]
 }
