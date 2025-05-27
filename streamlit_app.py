@@ -44,18 +44,6 @@ data = {
 df = pd.DataFrame(data)
 st.dataframe(df, use_container_width=True)
 
-import matplotlib.pyplot as plt
-
-labels = ['Passed', 'Failed']
-sizes = [8, 2]
-colors = ['#00cc96', '#ef553b']  # green and red
-
-fig, ax = plt.subplots()
-ax.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
-ax.axis('equal')  # Equal aspect ratio ensures pie is circular.
-
-st.pyplot(fig)
-
 # ---- Download Test Results ----
 st.subheader("📂 Test Case Results")
 csv = df.to_csv(index=False).encode("utf-8")
