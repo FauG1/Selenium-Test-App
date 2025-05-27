@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-import plotly.express as px
 import io
 
 # ---- PAGE CONFIG ----
@@ -49,24 +48,6 @@ st.dataframe(df, use_container_width=True)
 st.subheader("📂 Test Case Results")
 csv = df.to_csv(index=False).encode("utf-8")
 st.download_button("Download as CSV", csv, "results.csv", "text/csv")
-
-
-
-# Sample result data
-results = {"Passed": 8, "Failed": 2}
-labels = list(results.keys())
-values = list(results.values())
-
-# Create pie chart
-fig = px.pie(
-    names=labels,
-    values=values,
-    title="Test Results",
-    hole=0.4  # for a donut style
-)
-
-# Show chart
-st.plotly_chart(fig, use_container_width=True)
 
 # ---- FOOTER ----
 st.markdown("---")
