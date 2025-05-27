@@ -4,10 +4,10 @@ from PIL import Image
 import io
 
 # ---- PAGE CONFIG ----
-st.set_page_config(page_title="Generic Dashboard", layout="centered")
+st.set_page_config(page_title="Selenium Dashboard", layout="centered")
 
 # ---- TITLE ----
-st.title("📊 Generic Dashboard")
+st.title("📊 Selenium Dashboard")
 st.write("This dashboard lets you upload data, view a table, trigger processing, and show results.")
 
 # ---- FILE UPLOAD ----
@@ -38,7 +38,6 @@ data = {
 }
 df = pd.DataFrame(data)
 st.dataframe(df, use_container_width=True)
-
 
 
 # ---- ACTION BUTTON ----
