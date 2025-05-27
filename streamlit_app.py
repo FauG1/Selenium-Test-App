@@ -19,14 +19,10 @@ if st.button("Click to Proceed with Test"):
     time.sleep(10)
     st.success("✅ Test completed successfully!")
 
-# ---- FILE UPLOAD ----
-st.subheader("📂 Upload a File")
-
-
 # ---- MOCK DATA TABLE ----
-st.subheader("Test Case Table")
+st.subheader("📝 Test Case Table")
 data = {
-    "Test ID": [1, 2, 3],
+    "Test ID": ["IFSTA" 1,"IFSTA" 2,"IFSTA" 3],
     "Description": ["Login test", "Checkout flow", "Search function"],
     "Status": ["✅ Passed", "✅ Passed", "❌ Failed"]
 }
@@ -34,7 +30,7 @@ df = pd.DataFrame(data)
 st.dataframe(df, use_container_width=True)
 
 # ---- Download Test Results ----
-st.subheader("Test Case Results")
+st.subheader("📂 Test Case Results")
 csv = df.to_csv(index=False).encode("utf-8")
 st.download_button("Download as CSV", csv, "results.csv", "text/csv")
 
