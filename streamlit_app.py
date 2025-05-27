@@ -44,6 +44,16 @@ data = {
 df = pd.DataFrame(data)
 st.dataframe(df, use_container_width=True)
 
+st.subheader("📊 Test Results Overview")
+
+# Example data: test outcomes
+data = pd.DataFrame({
+    "Results": [21, 3]  # 21 passed, 3 failed
+}, index=["Passed", "Failed"])
+
+# Show small bar chart
+st.bar_chart(data)
+
 # ---- Download Test Results ----
 st.subheader("📂 Test Case Results")
 csv = df.to_csv(index=False).encode("utf-8")
