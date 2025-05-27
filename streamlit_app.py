@@ -26,7 +26,7 @@ if st.button("Run Test: IFS.T.A. 3"):
     # Simulate logic or processing
     st.info("Processing...")
     # Fake result
-    st.success("❌ Test Failed")
+    st.error("❌ Test Failed")
 
 # ---- MOCK DATA TABLE ----
 st.subheader("📝 Test Case Table")
