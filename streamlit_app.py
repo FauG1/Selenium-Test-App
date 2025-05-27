@@ -39,7 +39,7 @@ st.subheader("📝 Test Case Table")
 data = {
     "Test ID": ["IFS.T.A. 1","IFS.T.A. 2","IFS.T.A. 3","IFS.T.A. 4"],
     "Description": ["Login test", "Checkout flow", "Checkout flow 2","Search function"],
-    "Status": ["✅ Passed", "✅ Passed", "❌ Failed","⚠️ Pass with Condition"]
+    "Status": ["✅ Passed", "✅ Passed", "❌ Failed","⚠️ Passed with Condition"]
 }
 df = pd.DataFrame(data)
 st.dataframe(df, use_container_width=True)
@@ -48,8 +48,8 @@ st.subheader("📊 Test Results Overview")
 
 # Example data: test outcomes
 data = pd.DataFrame({
-    "Results": [2, 1, 1]  # 21 passed, 3 failed
-}, index=["✅ Passed", "❌ Failed", "⚠️ Pass with Condition"])
+    "Results": [2, 1, 1]  
+}, index=["✅ 1.Passed", "❌ 2.Failed", "⚠️ 3.Conditional Pass"])
 
 # Show small bar chart
 st.bar_chart(data)
