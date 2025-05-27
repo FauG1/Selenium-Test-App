@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
+import plotly.express as px
 import io
 
 # ---- PAGE CONFIG ----
@@ -49,7 +50,7 @@ st.subheader("📂 Test Case Results")
 csv = df.to_csv(index=False).encode("utf-8")
 st.download_button("Download as CSV", csv, "results.csv", "text/csv")
 
-import plotly.express as px
+
 
 # Sample result data
 results = {"Passed": 8, "Failed": 2}
