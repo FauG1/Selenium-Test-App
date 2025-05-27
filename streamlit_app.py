@@ -10,16 +10,6 @@ st.set_page_config(page_title="Generic Dashboard", layout="centered")
 st.title("📊 Generic Dashboard")
 st.write("This dashboard lets you upload data, view a table, trigger processing, and show results.")
 
-# ---- MOCK DATA TABLE ----
-st.subheader("Test Case Table")
-data = {
-    "Test ID": [1, 2, 3],
-    "Description": ["Login test", "Checkout flow", "Search function"],
-    "Status": ["Pending", "Pending", "Pending"]
-}
-df = pd.DataFrame(data)
-st.dataframe(df, use_container_width=True)
-
 # ---- FILE UPLOAD ----
 st.subheader("📂 Upload a File")
 uploaded_file = st.file_uploader("Choose a file (CSV, TXT, PNG...)", type=["csv", "txt", "png", "jpg", "jpeg"])
@@ -38,6 +28,18 @@ if uploaded_file:
     elif file_type.endswith("txt"):
         text = uploaded_file.read().decode("utf-8")
         st.text_area("Text Content", value=text, height=200)
+
+# ---- MOCK DATA TABLE ----
+st.subheader("Test Case Table")
+data = {
+    "Test ID": [1, 2, 3],
+    "Description": ["Login test", "Checkout flow", "Search function"],
+    "Status": ["Pending", "Pending", "Pending"]
+}
+df = pd.DataFrame(data)
+st.dataframe(df, use_container_width=True)
+
+
 
 # ---- ACTION BUTTON ----
 st.subheader("🛠 Run a Process")
