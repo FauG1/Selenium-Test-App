@@ -16,7 +16,6 @@ if st.button("Click to Proceed with Test"):
     # Simulate logic or processing
     st.info("Processing...")
     # Fake result
-    time.sleep(10)
     st.success("✅ Test completed successfully!")
 
 # ---- MOCK DATA TABLE ----
