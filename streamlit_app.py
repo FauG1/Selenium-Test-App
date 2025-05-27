@@ -48,8 +48,9 @@ st.subheader("📊 Test Results Overview")
 
 # Example data: test outcomes
 data = pd.DataFrame({
-    "Results": [2, 1, 1]  
-}, index=["✅ 1.Passed", "❌ 2.Failed", "⚠️ 3.Conditional Pass"])
+    "Results": [1, 1, 2]  
+}, index=["❌ 2.Failed", "⚠️ 3.Conditional Pass", "✅ 1.Passed"])
+# index=["✅ 1.Passed", "❌ 2.Failed", "⚠️ 3.Conditional Pass"])
 
 # Show small bar chart
 st.bar_chart(data)
