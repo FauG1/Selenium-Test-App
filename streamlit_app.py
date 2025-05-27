@@ -12,11 +12,21 @@ st.write("This dashboard lets you trigger Test Runs, show results of the Test Ru
 
 # ---- ACTION BUTTON ----
 st.subheader("🛠 Run an automated Test")
-if st.button("Click to Proceed with Test"):
+if st.button("Run Test: IFS.T.A. 1"):
     # Simulate logic or processing
     st.info("Processing...")
     # Fake result
     st.success("✅ Test completed successfully!")
+if st.button("Run Test: IFS.T.A. 2"):
+    # Simulate logic or processing
+    st.info("Processing...")
+    # Fake result
+    st.success("✅ Test completed successfully!")
+if st.button("Run Test: IFS.T.A. 3"):
+    # Simulate logic or processing
+    st.info("Processing...")
+    # Fake result
+    st.success("❌ Test Failed")
 
 # ---- MOCK DATA TABLE ----
 st.subheader("📝 Test Case Table")
