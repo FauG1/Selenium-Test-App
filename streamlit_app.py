@@ -27,13 +27,19 @@ if st.button("Run Test: IFS.T.A. 3"):
     st.info("Processing...")
     # Fake result
     st.error("❌ Test Failed")
+if st.button("Run Test: IFS.T.A. 4"):
+    # Simulate logic or processing
+    st.info("Processing...")
+    # Fake result
+    st.warning("⚠️ Pass with Condition")
+    st.warning("Test Completed, but Data Quality issue")
 
 # ---- MOCK DATA TABLE ----
 st.subheader("📝 Test Case Table")
 data = {
-    "Test ID": ["IFS.T.A. 1","IFS.T.A. 2","IFS.T.A. 3"],
-    "Description": ["Login test", "Checkout flow", "Search function"],
-    "Status": ["✅ Passed", "✅ Passed", "❌ Failed"]
+    "Test ID": ["IFS.T.A. 1","IFS.T.A. 2","IFS.T.A. 3","IFS.T.A. 4"],
+    "Description": ["Login test", "Checkout flow", "Checkout flow 2","Search function"],
+    "Status": ["✅ Passed", "✅ Passed", "❌ Failed","⚠️ Pass with Condition"]
 }
 df = pd.DataFrame(data)
 st.dataframe(df, use_container_width=True)
